@@ -1,0 +1,53 @@
+.sideNav {
+    background-color: #3F0F40;
+    color: white;
+    border-top: 1px solid gray !important;
+    width: 230px;
+     min-width: 200px;
+     max-width: 260px !important;
+}
+
+.sideNav__header {
+    display: flex;
+    padding: 10px;
+    border-bottom: 1px solid gray !important;
+}
+
+.sideNav__info > h6 {
+    display: flex;
+    align-items: center;
+    font-weight: 300;
+}
+
+.sideNav__header > .MuiSvgIcon-root {
+    height: 30px;
+    width: 30px;
+    padding: 8px;
+    background-color: white;
+    border-radius: 50%;
+    color: #3F0F40;
+
+}
+
+.sideNav__info {
+    flex: 1;
+}
+
+.sideNav__info > h4 {
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.sideNav__info > h6 > .MuiSvgIcon-root {
+    color: green;
+    font-size: 15px;
+    margin-right: 2px;
+    margin-top: 1px;
+}
+
+
+.sideNav > hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #49274b;
+}

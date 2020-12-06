@@ -1,0 +1,29 @@
+.sideNavRow {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    max-width: 260px;
+    padding:10px;
+}
+
+.sideNavRow__icon {
+    font-size: 15px !important;
+}
+/* 
+.sideNavRow__channel {
+    padding: 10px 0;
+} */
+
+.sideNavRow__hash {
+    padding: 10px;
+}
+
+.sideNavRow > h5 {
+    margin-left: 10px;
+    font-weight: 500;
+}
+
+.sideNavRow:hover {
+    opacity: 0.9;
+    background-color:  #340e35;
+}
