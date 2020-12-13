@@ -1,10 +1,19 @@
 import React, { useEffect } from "react";
 import "./SideNavRow.css";
+import db from "./firebase";
+
 
 const SideNavRow = ({ Icon, title,addChannelOption,id }) => {
       console.log(id)
 const addChannel = () => {
     const addChannel = prompt("Enter Channel You want to add");
+    if(addChannel){
+       db.collection("Room").add({
+         name: addChannel
+       })
+
+    }
+
     
 }
 
