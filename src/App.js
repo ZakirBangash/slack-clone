@@ -14,7 +14,7 @@ function App() {
       <Routes>
         
           <Route
-          path="search/:slug"
+          path="Room/:slug"
           element={
             <>
                 <Chat />

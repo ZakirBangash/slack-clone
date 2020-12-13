@@ -1,10 +1,13 @@
 import React, { useEffect } from "react";
 import "./SideNavRow.css";
 import db from "./firebase";
+import { useNavigate } from "react-router-dom";
 
 
 const SideNavRow = ({ Icon, title,addChannelOption,id }) => {
-      console.log(id)
+
+  let navigate = useNavigate();
+      
 const addChannel = () => {
     const addChannel = prompt("Enter Channel You want to add");
     if(addChannel){
@@ -18,7 +21,11 @@ const addChannel = () => {
 }
 
 const selectChannel = () => {
-  alert(id)
+  if(id){
+    navigate(`/room/${id}`);
+  }else{
+    navigate(title)
+  }
 }
   return (
     <div className="sideNavRow" onClick={addChannelOption ? addChannel : selectChannel}>
