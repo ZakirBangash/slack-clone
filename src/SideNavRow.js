@@ -1,13 +1,22 @@
 import React, { useEffect } from "react";
 import "./SideNavRow.css";
 
-const SideNavRow = ({ Icon, title }) => {
+const SideNavRow = ({ Icon, title,addChannelOption,id }) => {
+      console.log(id)
+const addChannel = () => {
+    const addChannel = prompt("Enter Channel You want to add");
+    
+}
+
+const selectChannel = () => {
+  alert(id)
+}
   return (
-    <div className="sideNavRow">
+    <div className="sideNavRow" onClick={addChannelOption ? addChannel : selectChannel}>
       {/* {Icon && <Icon className="sideNavRow__icon" />} */}
       {Icon ? (
           <>
-          <Icon className="sideNavRow__icon" />
+          {/* <Icon className="sideNavRow__icon" /> */} 
         <h5>{title}</h5>
         </>
       ) : (

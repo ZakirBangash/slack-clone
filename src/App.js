@@ -1,16 +1,30 @@
-
-import './App.css';
-import Header from './Components/Header/Header';
-import SideNav from './SideNav'
+import "./App.css";
+import Header from "./Components/Header/Header";
+import SideNav from "./SideNav";
+import { Routes, Route, Link } from "react-router-dom";
+import { Chat } from "./Chat";
 
 function App() {
   return (
     <div className="app">
-        <Header />
+      <Header />
         <div className="app__body">
           <SideNav />
-          <h1>dkdjdkdlksjdfkljdsfljd</h1>
-        </div>
+         
+      <Routes>
+        
+          <Route
+          path="search/:slug"
+          element={
+            <>
+                <Chat />
+              
+            </>
+          }
+        />
+       
+      </Routes>
+      </div>
     </div>
   );
 }
