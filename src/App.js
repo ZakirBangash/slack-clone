@@ -1,22 +1,22 @@
-import { useState } from "react";
+import { useState,useContext } from "react";
 import "./App.css";
 import Header from "./Components/Header/Header";
 import SideNav from "./SideNav";
 import { Routes, Route, Link } from "react-router-dom";
 import { Chat } from "./Chat";
 import Login from "./Login";
-import { useStateValue } from "./GlobalState";
+import { GlobalContext } from "./GlobalState";
 
 
 
 function App() {
-  
-  const [{ user }, dispatch] = useStateValue();
-    console.log(user)
+  const [users, setuser] = useState(null);
+  const {state} = useContext(GlobalContext);
 
+  console.log(state)
   return (
     <div className="app">
-      {user ? (
+      {!state ? (
         <Login />
       ) : (
         <>
