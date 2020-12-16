@@ -24,15 +24,17 @@
 // export default reducer;
 
 export const initialState = {
-    user: 'zakir',
+    user: null,
 };
 
 
 const reducer = (state, action) => {
     
+  console.log(action)
       switch (action.type) {
-        case "Add": {
-            {console.log("i am on reducer")}
+        case "addUser": {
+          console.log("AddUser of the Sign")
+              return state;
         }
         
         default:

@@ -5,18 +5,18 @@ import SideNav from "./SideNav";
 import { Routes, Route, Link } from "react-router-dom";
 import { Chat } from "./Chat";
 import Login from "./Login";
-import { GlobalContext } from "./GlobalState";
+import GlobalContext from "./GlobalState";
 
 
 
 function App() {
   const [users, setuser] = useState(null);
-  const {state} = useContext(GlobalContext);
+  const {transactions} = useContext(GlobalContext);
 
-  console.log(state)
+  console.log(transactions)
   return (
     <div className="app">
-      {!state ? (
+      {transactions ? (
         <Login />
       ) : (
         <>
